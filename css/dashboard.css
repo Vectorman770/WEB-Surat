@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #495057;
+    padding: 32px 20px;
+}
+.breadcrumbBar {
+    background-color: #e9ecef;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.breadcrumbLink {
+    color: #4a77d4;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.breadcrumbLink:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbCurrent {
+    color: #6c757d;
+    font-weight: 400;
+}
+
+.breadcrumbSeparator {
+    color: #6c757d;
+    user-select: none;
+}
+
+.welcomeCard {
+    background-color: #e9ecef;
+    border-radius: 6px;
+    padding: 48px 52px;
+}
+
+.welcomeHeader {
+    margin-bottom: 28px;
+}
+
+.welcomeTitle {
+    font-size: 34px;
+    font-weight: 300;
+    color: #343a40;
+    margin-bottom: 14px;
+    line-height: 1.25;
+}
+
+.welcomeSubtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #495057;
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.welcomeDescription {
+    font-size: 13.5px;
+    color: #6c757d;
+    line-height: 1.65;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #d6d8db;
+    margin: 28px 0;
+}
+
+.servicesPrompt {
+    font-size: 15px;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 22px;
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.serviceCard {
+    background-color: #4a77d4;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 20px 22px;
+    min-height: 115px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 14.5px;
+    font-weight: 600;
+    line-height: 1.45;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.serviceCard:hover {
+    background-color: #3b66c4;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(74, 119, 212, 0.25);
+}
+
+@media (max-width: 992px) {
+    .servicesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .welcomeCard {
+        padding: 36px 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .servicesGrid {
+        grid-template-columns: 1fr;
+    }
+    .welcomeTitle {
+        font-size: 26px;
+    }
+}

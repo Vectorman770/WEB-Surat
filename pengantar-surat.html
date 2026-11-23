@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengurusan Surat - Layanan Mandiri Persuratan UINAM</title>
+    <link rel="stylesheet" href="css/pengantar.css">
+</head>
+<body>
+
+    <nav class="breadcrumbBar" id="dynamicBreadcrumb" aria-label="Breadcrumb"></nav>
+    </main>
+
+        <article class="contentSection">
+            <header class="pageHeader">
+                <h1 id="pageTitle" class="mainTitle">Pengurusan Surat Rekomendasi Fakultas</h1>
+                <p id="subDescription" class="subDescription">
+                    Berikut ini adalah tautan/link untuk proses pengajuan Surat Rekomendasi Fak. Sains &amp; Teknologi UINAM.
+                </p>
+            </header>
+
+            <section class="notesSection" aria-labelledby="notesHeading">
+                <h2 id="notesHeading" class="notesLabel">Catatan:</h2>
+                <p id="notesContent" class="notesText">
+                    (1) Unggah/Upload dokumen pelengkap pada form. sesuai yang dipersyaratkan yaitu: a) Bukti Pembayaran SPP terakhir; b) Transkrip Nilai Sementara. (2) Apabila dokumen yang diunggah/upload tidak sesuai maka surat tidak akan diproses. (3) Setelah mengisi/menginput data pada formulir, selanjutnya mahasiswa dapat mengecek terbitnya Surat pada E-Mail (Kesalahan penginputan data E-Mail dapat berakibat tidak terkirimnya surat) atau pada Loket di Bagian Akademik Fak. Sains &amp; Teknologi UINAM.
+                </p>
+            </section>
+
+            <div class="actionWrapper">
+                <a id="btnAjukan" href="ajukan-surat.html?jenis=rekomendasi-fakultas" class="btnPrimary">
+                    Buat Surat Rekomendasi Fakultas
+                </a>
+            </div>
+        </article>
+
+        <footer class="pageFooter">
+            <p>Copyright &copy; e-scene 2026</p>
+        </footer>
+    </main>
+
+    <script>
+        const layananMap = {
+            'rekomendasi-fakultas': {
+                nama: 'Surat Rekomendasi Fakultas',
+                syarat: 'a) Bukti Pembayaran SPP terakhir; b) Transkrip Nilai Sementara.'
+            },
+            'keterangan-lulus': {
+                nama: 'Surat Keterangan Lulus',
+                syarat: 'a) Bukti Pembayaran SPP terakhir; b) Berita Acara Ujian Munaqasyah; c) Transkrip Nilai Akhir.'
+            },
+            'tidak-menerima-beasiswa': {
+                nama: 'Surat Keterangan Tidak Menerima Beasiswa',
+                syarat: 'a) Bukti Pembayaran SPP terakhir; b) Kartu Hasil Studi (KHS) semester berjalan.'
+            },
+            'berkelakuan-baik': {
+                nama: 'Surat Berkelakuan Baik',
+                syarat: 'a) Bukti Pembayaran SPP terakhir; b) Kartu Tanda Mahasiswa (KTM).'
+            },
+            'masih-kuliah': {
+                nama: 'Surat Keterangan Masih Kuliah',
+                syarat: 'a) Bukti Pembayaran SPP terakhir; b) Kartu Rencana Studi (KRS) aktif.'
+            },
+            'cuti-akademik': {
+                nama: 'Surat Keterangan Cuti Akademik',
+                syarat: 'a) Surat Permohonan Cuti bermaterai; b) Bukti bebas pustaka; c) Transkrip Nilai Sementara.'
+            },
+            'aktif-kembali': {
+                nama: 'Surat Aktif Kembali Pasca Cuti',
+                syarat: 'a) Surat Keterangan Cuti Akademik sebelumnya; b) Bukti Pembayaran UKT/SPP semester aktif.'
+            },
+            'keterangan-alumni': {
+                nama: 'Surat Keterangan Alumni',
+                syarat: 'a) Scan Ijazah atau Surat Keterangan Lulus; b) Transkrip Nilai.'
+            },
+            'penelitian-skripsi': {
+                nama: 'Surat Keterangan dalam Proses Penelitian untuk Penyelesaian Skripsi',
+                syarat: 'a) Bukti Pembayaran SPP terakhir; b) Lembar Pengesahan Proposal Skripsi.'
+            },
+            'tunjangan-anak-pegawai': {
+                nama: 'Surat Aktif Kuliah Untuk Tunjangan Anak Pegawai',
+                syarat: 'a) Bukti Pembayaran SPP terakhir; b) SK Terakhir Orang Tua (PNS/ASN); c) Kartu Keluarga.'
+            },
+            'surat-observasi': {
+                nama: 'Surat Observasi',
+                syarat: 'a) Bukti Pembayaran SPP terakhir; b) Surat Pengantar dari Jurusan/Prodi.'
+            },
+            'kehilangan-spp': {
+                nama: 'Surat Keterangan Kehilangan SPP',
+                syarat: 'a) Surat Keterangan Kehilangan dari Kepolisian; b) Fotokopi KTM.'
+            }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const jenisKode = urlParams.get('jenis') || 'rekomendasi-fakultas';
+        const dataLayanan = layananMap[jenisKode] || layananMap['rekomendasi-fakultas'];
+
+        document.getElementById('breadcrumbTitle').textContent = dataLayanan.nama;
+        document.getElementById('pageTitle').textContent = 'Pengurusan ' + dataLayanan.nama;
+        document.getElementById('subDescription').textContent =
+            'Berikut ini adalah tautan/link untuk proses pengajuan ' + dataLayanan.nama + ' Fak. Sains & Teknologi UINAM.';
+        document.getElementById('notesContent').textContent =
+            '(1) Unggah/Upload dokumen pelengkap pada form. sesuai yang dipersyaratkan yaitu: ' + dataLayanan.syarat +
+            ' (2) Apabila dokumen yang diunggah/upload tidak sesuai maka surat tidak akan diproses. (3) Setelah mengisi/menginput data pada formulir, selanjutnya mahasiswa dapat mengecek terbitnya Surat pada E-Mail (Kesalahan penginputan data E-Mail dapat berakibat tidak terkirimnya surat) atau pada Loket di Bagian Akademik Fak. Sains & Teknologi UINAM.';
+
+        const btnAjukan = document.getElementById('btnAjukan');
+        btnAjukan.textContent = 'Buat ' + dataLayanan.nama;
+        btnAjukan.href = 'ajukan-surat.html?jenis=' + jenisKode;
+    </script>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

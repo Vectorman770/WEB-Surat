@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Masuk - Layanan Mandiri Persuratan UINAM</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="loginContainer">
+        <!-- Bagian Header Logo -->
+        <header class="logoWrapper">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYNAjMFjJVZc8OfhcYVhAucbdRASUMvd-r5U69l_Gz3Q&s=10" alt="Logo UIN Alauddin Makassar" class="campusLogo">
+        </header>
+
+        <!-- Bagian Utama Kartu Login -->
+        <section class="loginCard">
+            <h1 class="loginTitle">Halaman Masuk</h1>
+
+            <form id="loginForm" action="dashboard.html" method="POST">
+                <div class="formGroup">
+                    <label for="usernameInput">Username / Nim</label>
+                    <input type="text" id="usernameInput" name="username" placeholder="Masukkan NIM Anda" required autocomplete="username">
+                </div>
+
+                <div class="formGroup">
+                    <label for="passwordInput">Password</label>
+                    <div class="passwordWrapper">
+                        <input type="password" id="passwordInput" name="password" placeholder="Masukkan Password" required autocomplete="current-password">
+                    </div>
+                </div>
+
+                <div class="rememberGroup">
+                    <input type="checkbox" id="rememberMe" name="remember">
+                    <label for="rememberMe">Remember Me</label>
+                </div>
+
+                <button type="submit" class="btnLogin">Login</button>
+            </form>
+
+            <p class="registerText">
+                Don't have an account? <a href="register.html" class="registerLink">Buat Akun</a>
+            </p>
+        </section>
+
+        <!-- Bagian Kaki (Footer) -->
+        <footer class="loginFooter">
+            <p>Copyright &copy; 2026 &mdash; Tim Akademik UIN Alauddin Makassar</p>
+        </footer>
+    </main>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const namaUser = document.getElementById('usernameInput').value.trim();
+            sessionStorage.setItem('namaMahasiswa', namaUser || 'MAHASISWA');
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

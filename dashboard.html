@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Utama - Layanan Mandiri Persuratan UINAM</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+
+   <nav class="breadcrumbBar" id="dynamicBreadcrumb" aria-label="Breadcrumb"></nav>
+    </main>
+        <section class="welcomeCard">
+            <header class="welcomeHeader">
+                <h1 class="welcomeTitle">Selamat Datang, <span id="displayNamaMahasiswa">Jhon Doe</span> !</h1>
+                <p class="welcomeSubtitle">
+                    Ini Adalah Halaman awal aplikasi Layanan Mandiri Persuratan Akademik Universitas Islam Negeri Alauddin Makassar
+                </p>
+                <p class="welcomeDescription">
+                    Aplikasi ini memudahkan Mahasiswa dalam melakukan Pengurusan Layanan Akademik tanpa harus melakukan tatap muka langsung dengan tim akademik, Anda cukup melampirkan beberapa berkas yang diperlukan yang sudah di pindai, Lalu Tim Akademik akan melakukan validasi terhadap berkas anda. Bila berkas Anda diterima, maka anda akan diberikan tembusan untuk menuju ke bagian pustipad untuk pengurusan lebih lanjut.
+                </p>
+            </header>
+
+            <hr class="divider">
+
+            <section class="servicesSection" aria-labelledby="servicesHeading">
+                <h2 id="servicesHeading" class="servicesPrompt">Silahkan Pilih layanan yang ada di bawah berikut :</h2>
+
+                <nav class="servicesGrid">
+                    <a href="pengantar-surat.html?jenis=rekomendasi-fakultas" class="serviceCard">
+                        <span>Surat Rekomendasi Fakultas</span>
+                    </a>
+                    <a href="pengantar-surat.html?jenis=keterangan-lulus" class="serviceCard">
+                        <span>Surat Keterangan Lulus</span>
+                    </a>
+                    <a href="pengantar-surat.html?jenis=tidak-menerima-beasiswa" class="serviceCard">
+                        <span>Surat Keterangan Tidak Menerima Beasiswa</span>
+                    </a>
+                    <a href="pengantar-surat.html?jenis=berkelakuan-baik" class="serviceCard">
+                        <span>Surat Berkelakuan Baik</span>
+                    </a>
+
+                    <a href="pengantar-surat.html?jenis=masih-kuliah" class="serviceCard">
+                        <span>Surat Keterangan Masih Kuliah</span>
+                    </a>
+                    <a href="pengantar-surat.html?jenis=cuti-akademik" class="serviceCard">
+                        <span>Surat Keterangan Cuti Akademik</span>
+                    </a>
+                    <a href="pengantar-surat.html?jenis=aktif-kembali" class="serviceCard">
+                        <span>Surat Aktif Kembali Pasca Cuti</span>
+                    </a>
+                    <a href="pengantar-surat.html?jenis=keterangan-alumni" class="serviceCard">
+                        <span>Surat Keterangan Alumni</span>
+                    </a>
+
+                    <a href="pengantar-surat.html?jenis=penelitian-skripsi" class="serviceCard">
+                        <span>Surat Keterangan dalam Proses Penelitian untuk Penyelesaian Skripsi</span>
+                    </a>
+                    <a href="pengantar-surat.html?jenis=tunjangan-anak-pegawai" class="serviceCard">
+                        <span>Surat Aktif Kuliah Untuk Tunjangan Anak Pegawai</span>
+                    </a>
+                    <a href="pengantar-surat.html?jenis=surat-observasi" class="serviceCard">
+                        <span>Surat Observasi</span>
+                    </a>
+                    <a href="pengantar-surat.html?jenis=kehilangan-spp" class="serviceCard">
+                        <span>Surat Keterangan Kehilangan SPP</span>
+                    </a>
+                </nav>
+            </section>
+        </section>
+    </main>
+
+    <script>
+        const savedName = sessionStorage.getItem('namaMahasiswa');
+        if (savedName) {
+            document.getElementById('displayNamaMahasiswa').textContent = savedName.toUpperCase();
+        }
+    </script>
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

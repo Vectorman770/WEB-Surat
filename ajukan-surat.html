@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajukan Surat - Layanan Mandiri Persuratan UINAM</title>
+    <link rel="stylesheet" href="css/ajukan.css">
+</head>
+<body>
+
+    <main class="container">
+        <!-- Bilah Navigasi Dinamis -->
+        <nav class="breadcrumbBar" id="dynamicBreadcrumb" aria-label="Breadcrumb"></nav>
+
+        <section class="formSection">
+            <header class="pageHeader">
+                <h1 id="formPageTitle" class="mainTitle">Pengurusan Surat</h1>
+                <p id="formSubDescription" class="subDescription">
+                    Silahkan isi form di bawah ini untuk melakukan pengurusan surat akademik.
+                </p>
+            </header>
+
+            <form id="pengajuanForm" action="#" method="POST" enctype="multipart/form-data">
+                <div class="formGrid">
+                    <!-- Kolom Kiri -->
+                    <div class="formColumn">
+                        <div class="formGroup">
+                            <label for="nimInput">NIM</label>
+                            <input type="text" id="nimInput" name="nim" placeholder="Contoh: 60200125025" required>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="namaInput">Nama Mahasiswa</label>
+                            <input type="text" id="namaInput" name="nama" placeholder="Masukkan nama lengkap Anda" required>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="genderInput">Jenis Kelamin</label>
+                            <input type="text" id="genderInput" name="jenisKelamin" placeholder="Contoh: Laki-laki" required>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="ttlInput">Tempat, Tanggal Lahir</label>
+                            <input type="text" id="ttlInput" name="ttl" placeholder="Contoh: Makassar / 2 Agustus 2007" required>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="fakultasInput">Fakultas / Jurusan</label>
+                            <input type="text" id="fakultasInput" name="fakultasJurusan" placeholder="Contoh: Sains dan Teknologi / Teknik Informatika" required>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="semesterInput">Semester</label>
+                            <input type="text" id="semesterInput" name="semester" placeholder="Contoh: 3 (Tiga)" required>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="emailInput">Email</label>
+                            <input type="email" id="emailInput" name="email" placeholder="Contoh: nama@student.uin-alauddin.ac.id" required>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="alamatInput">Alamat</label>
+                            <textarea id="alamatInput" name="alamat" rows="4" placeholder="Masukkan alamat domisili saat ini" required></textarea>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="teleponInput">Nomor Telepon</label>
+                            <input type="tel" id="teleponInput" name="telepon" placeholder="Contoh: 081234567890" required>
+                        </div>
+                    </div>
+
+                    <!-- Kolom Kanan -->
+                    <div class="formColumn">
+                        <div class="formGroup">
+                            <label for="ipkInput">IPK</label>
+                            <input type="text" id="ipkInput" name="ipk" placeholder="Contoh: 3.50" required>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="keperluanInput">Keperluan</label>
+                            <textarea id="keperluanInput" name="keperluan" rows="4" placeholder="Contoh: Pengurusan Beasiswa Pemda Kab. Bulukumba" required></textarea>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="lampiranInput">Lampiran (Format: PDF, maks: 2MB)</label>
+                            <div class="fileInputWrapper">
+                                <input type="file" id="lampiranInput" name="lampiran" accept="application/pdf" required>
+                            </div>
+                            <small id="fileError" class="errorText"></small>
+                        </div>
+
+                        <div class="formGroup">
+                            <label for="tanggalInput">Tanggal Permohonan</label>
+                            <input type="date" id="tanggalInput" name="tanggalPermohonan" required>
+                        </div>
+
+                        <div class="submitWrapper">
+                            <button type="submit" class="btnSubmit">
+                                <svg class="sendIcon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                                </svg>
+                                <span>Kirim Permohonan</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
